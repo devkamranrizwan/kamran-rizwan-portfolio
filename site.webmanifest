@@ -1,0 +1,9 @@
+{
+  "name": "Kamran Rizwan | Senior Software Engineer",
+  "short_name": "Kamran Rizwan",
+  "icons": [{"src": "assets/apple-touch-icon.png", "sizes": "128x128", "type": "image/png"}],
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#10171b",
+  "theme_color": "#10171b"
+}
