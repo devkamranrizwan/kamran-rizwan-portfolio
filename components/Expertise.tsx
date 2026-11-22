@@ -1,0 +1,5 @@
+import { capabilities } from "@/data/portfolio";
+
+export function Expertise() {
+  return <section aria-labelledby="expertise-title" className="section expertise" id="expertise"><div className="container"><div className="section-row"><div><div className="section-eyebrow mono">What I do</div><h2 className="section-title" id="expertise-title">What I can build for you.</h2></div><p className="section-lead">From polished user interfaces to backend workflows and AI-enabled features, I bring the engineering breadth to move products forward.</p></div><div className="capability-grid">{capabilities.map((capability) => <article className="capability" key={capability.category}><span aria-hidden="true" className="capability-mark">{capability.mark}</span><div className="mono">{capability.category}</div><h3>{capability.title}</h3><p>{capability.description}</p><div className="chip-list">{capability.skills.map((skill) => <span className="chip" key={skill}>{skill}</span>)}</div></article>)}</div></div></section>;
+}
