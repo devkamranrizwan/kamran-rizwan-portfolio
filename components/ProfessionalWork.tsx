@@ -14,7 +14,7 @@ export function ProfessionalWork() {
   return (
     <section aria-labelledby="commercial-title" className="section commercial" id="professional-work">
       <div className="container">
-        <div className="commercial-heading"><div><div className="section-eyebrow">Professional work</div><h2 className="section-title" id="commercial-title">Engineering products used in the real world.</h2><p className="section-lead">Selected commercial products from my engineering career — across financial technology, enterprise software, logistics, digital workplaces and more.</p></div><div className="commercial-aside"><strong>Seven products.</strong><span>Real teams, real business problems, and engineering across different domains.</span></div></div>
+        <div className="commercial-heading"><div><div className="section-eyebrow">Professional work</div><h2 className="section-title" id="commercial-title">Engineering products used in the real world</h2><p className="section-lead">Selected commercial products from my engineering career — across financial technology, enterprise software, logistics, digital workplaces and more.</p></div><div className="commercial-aside"><strong>Seven products.</strong><span>Real teams, real business problems, and engineering across different domains.</span></div></div>
         <div className="commercial-grid">
           {professionalProjects.map((project) => <article className={`com-card ${project.featured ? "com-featured" : "com-compact"} com-${project.slug}`} key={project.slug}>
             <ProductVisual slug={project.slug} />

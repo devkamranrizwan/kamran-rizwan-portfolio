@@ -45,8 +45,9 @@
     .brand-name { font: 700 15px/1.15 var(--sans) }
     .brand-name small { display: block; font: 400 11px/1.6 var(--mono); color: var(--secondary); margin-top: 2px }
     .header-nav { margin-left: auto; display: flex; align-items: center; gap: clamp(18px, 2.5vw, 35px); font-size: 13px; font-weight: 600 }
-    .header-nav a { transition: color .18s }
+    .header-nav a { transition: color .18s, text-decoration-color .18s }
     .header-nav a:hover { color: var(--blue) }
+    .header-nav a.is-active { color: var(--blue); text-decoration-line: underline; text-decoration-thickness: 2px; text-decoration-color: currentColor; text-underline-offset: 8px }
     .header-contact { display: inline-flex; align-items: center; gap: 9px; padding: 11px 15px; border: 1px solid var(--ink); border-radius: 4px; font-size: 12px; font-weight: 700; white-space: nowrap }
     .header-contact:hover { background: var(--lime) }
     .menu-toggle { display: none; margin-left: auto; background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 4px; padding: 9px 12px; cursor: pointer }
@@ -303,10 +304,11 @@
     html[data-theme="dark"] .contact-methods a:hover, html[data-theme="dark"] .contact-methods a:first-child span:last-child { color: var(--blue) }
     html[data-theme="dark"] .contact-section p { color: var(--secondary) }
     html[data-theme="dark"] .site-footer { background: #0c1519 }
-    @media (max-width: 900px) {
+    @media (max-width: 1023px) {
       .site-header .header-nav { display: none; position: absolute; top: 72px; left: 0; right: 0; margin: 0; padding: 16px 20px 24px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 8px 14px #00000030; flex-direction: column; align-items: stretch; gap: 0 }
       .site-header .header-nav.is-open { display: flex }
       .site-header .header-nav a { display: block; padding: 13px 3px; border-bottom: 1px solid var(--line) }
+      .site-header .header-nav a.is-active { background: color-mix(in srgb,var(--blue) 10%,transparent); text-underline-offset: 4px }
       .site-header .header-contact { display: none }
       .site-header .header-inner { height: 72px; gap: 9px }
       .site-header .theme-toggle { margin-left: auto }
